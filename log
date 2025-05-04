@@ -1,0 +1,308 @@
+ilv-test:1521175:1521175 [0] NCCL INFO cudaDriverVersion 10020
+ilv-test:1521175:1521175 [0] NCCL INFO Bootstrap : Using ens8np0:10.20.210.11<0>
+ilv-test:1521175:1521175 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+NCCL version 2.14.3+cuda10.2
+/usr/local/corex-4.2.0/lib64/python3/dist-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+Total Trainable Parameters: 10788929
+Model Summary : DataParallel(
+  (module): SeedGPT(
+    (emb): Embedding(65, 384)
+    (pos_tok): Embedding(256, 384)
+    (blocks): Sequential(
+      (0): Block(
+        (head): MultiHead(
+          (multihead): ModuleList(
+            (0-5): 6 x Head(
+              (Q): Linear(in_features=384, out_features=64, bias=False)
+              (K): Linear(in_features=384, out_features=64, bias=False)
+              (V): Linear(in_features=384, out_features=64, bias=False)
+              (dropout): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (ff): FFNet(
+          (ff): Sequential(
+            (0): Linear(in_features=384, out_features=1536, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=1536, out_features=384, bias=True)
+            (3): Dropout(p=0.2, inplace=False)
+          )
+        )
+        (ln1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      )
+      (1): Block(
+        (head): MultiHead(
+          (multihead): ModuleList(
+            (0-5): 6 x Head(
+              (Q): Linear(in_features=384, out_features=64, bias=False)
+              (K): Linear(in_features=384, out_features=64, bias=False)
+              (V): Linear(in_features=384, out_features=64, bias=False)
+              (dropout): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (ff): FFNet(
+          (ff): Sequential(
+            (0): Linear(in_features=384, out_features=1536, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=1536, out_features=384, bias=True)
+            (3): Dropout(p=0.2, inplace=False)
+          )
+        )
+        (ln1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      )
+      (2): Block(
+        (head): MultiHead(
+          (multihead): ModuleList(
+            (0-5): 6 x Head(
+              (Q): Linear(in_features=384, out_features=64, bias=False)
+              (K): Linear(in_features=384, out_features=64, bias=False)
+              (V): Linear(in_features=384, out_features=64, bias=False)
+              (dropout): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (ff): FFNet(
+          (ff): Sequential(
+            (0): Linear(in_features=384, out_features=1536, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=1536, out_features=384, bias=True)
+            (3): Dropout(p=0.2, inplace=False)
+          )
+        )
+        (ln1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      )
+      (3): Block(
+        (head): MultiHead(
+          (multihead): ModuleList(
+            (0-5): 6 x Head(
+              (Q): Linear(in_features=384, out_features=64, bias=False)
+              (K): Linear(in_features=384, out_features=64, bias=False)
+              (V): Linear(in_features=384, out_features=64, bias=False)
+              (dropout): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (ff): FFNet(
+          (ff): Sequential(
+            (0): Linear(in_features=384, out_features=1536, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=1536, out_features=384, bias=True)
+            (3): Dropout(p=0.2, inplace=False)
+          )
+        )
+        (ln1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      )
+      (4): Block(
+        (head): MultiHead(
+          (multihead): ModuleList(
+            (0-5): 6 x Head(
+              (Q): Linear(in_features=384, out_features=64, bias=False)
+              (K): Linear(in_features=384, out_features=64, bias=False)
+              (V): Linear(in_features=384, out_features=64, bias=False)
+              (dropout): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (ff): FFNet(
+          (ff): Sequential(
+            (0): Linear(in_features=384, out_features=1536, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=1536, out_features=384, bias=True)
+            (3): Dropout(p=0.2, inplace=False)
+          )
+        )
+        (ln1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      )
+      (5): Block(
+        (head): MultiHead(
+          (multihead): ModuleList(
+            (0-5): 6 x Head(
+              (Q): Linear(in_features=384, out_features=64, bias=False)
+              (K): Linear(in_features=384, out_features=64, bias=False)
+              (V): Linear(in_features=384, out_features=64, bias=False)
+              (dropout): Dropout(p=0.2, inplace=False)
+            )
+          )
+          (proj): Linear(in_features=384, out_features=384, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (ff): FFNet(
+          (ff): Sequential(
+            (0): Linear(in_features=384, out_features=1536, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=1536, out_features=384, bias=True)
+            (3): Dropout(p=0.2, inplace=False)
+          )
+        )
+        (ln1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      )
+      (6): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+    )
+    (lm): Linear(in_features=384, out_features=65, bias=True)
+  )
+)
+[0] Training loss : 4.312288875579834 Evaluation loss : 4.315868391990661
+[100] Training loss : 2.4746722769737244 Evaluation loss : 2.4928327679634092
+[101] Training loss : 2.4746434402465822 Evaluation loss : 2.490965483188629
+[200] Training loss : 2.3445903038978577 Evaluation loss : 2.373236408233643
+[300] Training loss : 2.100712552070618 Evaluation loss : 2.1512166714668273
+[400] Training loss : 1.933719925880432 Evaluation loss : 2.022846758365631
+[500] Training loss : 1.8144663631916047 Evaluation loss : 1.9369826686382294
+[600] Training loss : 1.7226777863502503 Evaluation loss : 1.8654807150363921
+[700] Training loss : 1.6531498038768768 Evaluation loss : 1.8136236572265625
+[800] Training loss : 1.5986166191101074 Evaluation loss : 1.7778228664398192
+[900] Training loss : 1.5499492681026459 Evaluation loss : 1.7428466808795928
+[1000] Training loss : 1.5173749363422393 Evaluation loss : 1.7067354619503021
+[1100] Training loss : 1.4824489045143128 Evaluation loss : 1.6771558761596679
+[1200] Training loss : 1.4543304193019866 Evaluation loss : 1.6684545123577117
+[1300] Training loss : 1.4322835493087769 Evaluation loss : 1.6388350486755372
+[1400] Training loss : 1.4088598847389222 Evaluation loss : 1.624658863544464
+[1500] Training loss : 1.3859848201274871 Evaluation loss : 1.6059333646297456
+[1600] Training loss : 1.3717453825473784 Evaluation loss : 1.59821284532547
+[1700] Training loss : 1.3557120394706725 Evaluation loss : 1.5814058947563172
+[1800] Training loss : 1.3389113700389863 Evaluation loss : 1.5724171483516693
+[1900] Training loss : 1.3291486418247223 Evaluation loss : 1.5714955341815948
+[2000] Training loss : 1.3113797426223754 Evaluation loss : 1.5533949148654937
+[2100] Training loss : 1.301528640985489 Evaluation loss : 1.5464749455451965
+[2200] Training loss : 1.2876410734653474 Evaluation loss : 1.5383968460559845
+[2300] Training loss : 1.280107740163803 Evaluation loss : 1.5397620749473573
+[2400] Training loss : 1.2691188263893127 Evaluation loss : 1.5295847761631012
+[2500] Training loss : 1.2571536600589752 Evaluation loss : 1.5231095921993256
+[2600] Training loss : 1.2503706455230712 Evaluation loss : 1.5063527119159699
+[2700] Training loss : 1.2377252304553985 Evaluation loss : 1.504789776802063
+[2800] Training loss : 1.2311976110935212 Evaluation loss : 1.5006667709350585
+[2900] Training loss : 1.2220410788059235 Evaluation loss : 1.4997207093238831
+[3000] Training loss : 1.217491843700409 Evaluation loss : 1.512452747821808
+[3100] Training loss : 1.2039371371269225 Evaluation loss : 1.4941729128360748
+[3200] Training loss : 1.1983457362651826 Evaluation loss : 1.4910185074806213
+[3300] Training loss : 1.188979421854019 Evaluation loss : 1.4902737903594971
+[3400] Training loss : 1.1824121236801148 Evaluation loss : 1.490079369544983
+[3500] Training loss : 1.1745428383350371 Evaluation loss : 1.4813352262973785
+[3600] Training loss : 1.16810178399086 Evaluation loss : 1.477442672252655
+[3700] Training loss : 1.1619292759895326 Evaluation loss : 1.4788947892189026
+[3800] Training loss : 1.1538548219203948 Evaluation loss : 1.4815162742137908
+[3900] Training loss : 1.1497033643722534 Evaluation loss : 1.4860278964042664
+[4000] Training loss : 1.1428129196166992 Evaluation loss : 1.476726883649826
+[4100] Training loss : 1.1325475251674653 Evaluation loss : 1.4805413806438446
+[4200] Training loss : 1.1265630078315736 Evaluation loss : 1.4750485074520112
+[4300] Training loss : 1.1200534331798553 Evaluation loss : 1.4725424313545228
+[4400] Training loss : 1.1137853503227233 Evaluation loss : 1.4711816334724426
+[4500] Training loss : 1.1067668068408967 Evaluation loss : 1.486774604320526
+[4600] Training loss : 1.1000316846370697 Evaluation loss : 1.482684952020645
+[4700] Training loss : 1.09181165933609 Evaluation loss : 1.4756622922420501
+[4800] Training loss : 1.0869061648845673 Evaluation loss : 1.4728578174114226
+[4900] Training loss : 1.0820268237590789 Evaluation loss : 1.4839958560466766
+[5000] Training loss : 1.075238151550293 Evaluation loss : 1.480718412399292
+[5100] Training loss : 1.0645831143856048 Evaluation loss : 1.480362960100174
+[5200] Training loss : 1.0612428069114686 Evaluation loss : 1.4888871431350708
+[5300] Training loss : 1.0561628711223603 Evaluation loss : 1.4907183527946473
+[5400] Training loss : 1.0528644621372223 Evaluation loss : 1.4847848296165467
+[5500] Training loss : 1.0421530997753143 Evaluation loss : 1.4825144231319427
+[5600] Training loss : 1.039459112882614 Evaluation loss : 1.4949804401397706
+[5700] Training loss : 1.0304662692546844 Evaluation loss : 1.4884216701984405
+[5800] Training loss : 1.0269901978969573 Evaluation loss : 1.4788855421543121
+[5900] Training loss : 1.0188227796554565 Evaluation loss : 1.4953629422187804
+[6000] Training loss : 1.0081355917453765 Evaluation loss : 1.4965703892707825
+[6100] Training loss : 1.0045162451267242 Evaluation loss : 1.4952147376537324
+[6200] Training loss : 0.9990741604566574 Evaluation loss : 1.5008038485050201
+[6300] Training loss : 0.9917074805498123 Evaluation loss : 1.4985265624523163
+[6400] Training loss : 0.984699187874794 Evaluation loss : 1.5097544622421264
+[6500] Training loss : 0.9795927411317825 Evaluation loss : 1.5041750288009643
+[6600] Training loss : 0.9739937996864318 Evaluation loss : 1.514841035604477
+[6700] Training loss : 0.9672471165657044 Evaluation loss : 1.5142263007164
+[6800] Training loss : 0.957677595615387 Evaluation loss : 1.5036391615867615
+[6900] Training loss : 0.9518948209285736 Evaluation loss : 1.5307365334033967
+[7000] Training loss : 0.9445156323909759 Evaluation loss : 1.5252776777744292
+[7100] Training loss : 0.9424462735652923 Evaluation loss : 1.521391053199768
+[7200] Training loss : 0.9377084660530091 Evaluation loss : 1.5190204966068268
+[7300] Training loss : 0.9280853062868119 Evaluation loss : 1.5336630213260651
+[7400] Training loss : 0.9233149641752243 Evaluation loss : 1.5298742508888246
+[7500] Training loss : 0.9162990218400955 Evaluation loss : 1.5277422308921813
+[7600] Training loss : 0.9097953218221665 Evaluation loss : 1.542017903327942
+[7700] Training loss : 0.9038114607334137 Evaluation loss : 1.5518691062927246
+[7800] Training loss : 0.9001151007413865 Evaluation loss : 1.545482952594757
+[7900] Training loss : 0.8884638756513595 Evaluation loss : 1.5534706962108613
+[8000] Training loss : 0.8864109283685684 Evaluation loss : 1.5523750543594361
+[8100] Training loss : 0.8766153812408447 Evaluation loss : 1.5603965532779693
+[8200] Training loss : 0.8719918024539948 Evaluation loss : 1.5605685818195343
+[8300] Training loss : 0.8663100445270538 Evaluation loss : 1.5610389959812165
+[8400] Training loss : 0.8629012668132782 Evaluation loss : 1.562972675561905
+[8500] Training loss : 0.8558015429973602 Evaluation loss : 1.5561006474494934
+[8600] Training loss : 0.8512232309579849 Evaluation loss : 1.5811560714244843
+[8700] Training loss : 0.8451207709312439 Evaluation loss : 1.5746856558322906
+[8800] Training loss : 0.8392584466934204 Evaluation loss : 1.5766479527950288
+[8900] Training loss : 0.8316691261529923 Evaluation loss : 1.5859430968761443
+[9000] Training loss : 0.8240655720233917 Evaluation loss : 1.586518348455429
+[9100] Training loss : 0.8231927734613419 Evaluation loss : 1.59239981174469
+[9200] Training loss : 0.8149571895599366 Evaluation loss : 1.5972130584716797
+[9300] Training loss : 0.807949715256691 Evaluation loss : 1.602188197374344
+[9400] Training loss : 0.8028471410274506 Evaluation loss : 1.597992081642151
+[9500] Training loss : 0.795502513051033 Evaluation loss : 1.603252843618393
+[9600] Training loss : 0.7897569161653518 Evaluation loss : 1.6097376823425293
+[9700] Training loss : 0.7852126222848892 Evaluation loss : 1.616912192106247
+[9800] Training loss : 0.7767789399623871 Evaluation loss : 1.6227471840381622
+[9900] Training loss : 0.7712448227405548 Evaluation loss : 1.618471190929413
+ilv-test:1521175:1521269 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [RO]; OOB ens8np0:10.20.210.11<0>
+ilv-test:1521175:1521269 [1] NCCL INFO Using network IB
+ilv-test:1521175:1521270 [2] NCCL INFO Using network IB
+ilv-test:1521175:1521268 [0] NCCL INFO Using network IB
+ilv-test:1521175:1521271 [3] NCCL INFO Using network IB
+ilv-test:1521175:1521269 [1] NCCL INFO Topo/Plugin: libnccl-topo.so is not used
+ilv-test:1521175:1521270 [2] NCCL INFO Topo/Plugin: libnccl-topo.so is not used
+ilv-test:1521175:1521268 [0] NCCL INFO Topo/Plugin: libnccl-topo.so is not used
+ilv-test:1521175:1521271 [3] NCCL INFO Topo/Plugin: libnccl-topo.so is not used
+ilv-test:1521175:1521270 [2] NCCL INFO Setting affinity for GPU 2 to ffff
+ilv-test:1521175:1521269 [1] NCCL INFO Setting affinity for GPU 1 to ffff
+ilv-test:1521175:1521268 [0] NCCL INFO Setting affinity for GPU 0 to ffff
+ilv-test:1521175:1521271 [3] NCCL INFO Setting affinity for GPU 3 to ffff
+ilv-test:1521175:1521271 [3] NCCL INFO Trees [0] -1/-1/-1->3->1
+ilv-test:1521175:1521270 [2] NCCL INFO Trees [0] -1/-1/-1->2->1
+ilv-test:1521175:1521268 [0] NCCL INFO Channel 00/01 :    0   1   2   3
+ilv-test:1521175:1521268 [0] NCCL INFO Trees [0] -1/-1/-1->0->1
+ilv-test:1521175:1521269 [1] NCCL INFO Trees [0] 0/2/3->1->-1
+ilv-test:1521175:1521271 [3] NCCL INFO Channel 00 : 3[26000] -> 0[5000] via SHM/direct/direct
+ilv-test:1521175:1521269 [1] NCCL INFO Channel 00 : 1[8000] -> 2[23000] via SHM/direct/direct
+ilv-test:1521175:1521268 [0] NCCL INFO Channel 00/0 : 0[5000] -> 1[8000] via P2P/direct pointer
+ilv-test:1521175:1521270 [2] NCCL INFO Channel 00/0 : 2[23000] -> 3[26000] via P2P/direct pointer
+ilv-test:1521175:1521268 [0] NCCL INFO Connected all rings
+ilv-test:1521175:1521270 [2] NCCL INFO Connected all rings
+ilv-test:1521175:1521270 [2] NCCL INFO Channel 00 : 2[23000] -> 1[8000] via SHM/direct/direct
+ilv-test:1521175:1521271 [3] NCCL INFO Connected all rings
+ilv-test:1521175:1521269 [1] NCCL INFO Connected all rings
+ilv-test:1521175:1521269 [1] NCCL INFO Channel 00 : 1[8000] -> 3[26000] via SHM/direct/direct
+ilv-test:1521175:1521271 [3] NCCL INFO Channel 00 : 3[26000] -> 1[8000] via SHM/direct/direct
+ilv-test:1521175:1521271 [3] NCCL INFO Connected all trees
+ilv-test:1521175:1521271 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ilv-test:1521175:1521271 [3] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
+ilv-test:1521175:1521269 [1] NCCL INFO Channel 00/0 : 1[8000] -> 0[5000] via P2P/direct pointer
+ilv-test:1521175:1521268 [0] NCCL INFO Connected all trees
+ilv-test:1521175:1521268 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ilv-test:1521175:1521268 [0] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
+ilv-test:1521175:1521269 [1] NCCL INFO Connected all trees
+ilv-test:1521175:1521269 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ilv-test:1521175:1521269 [1] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
+ilv-test:1521175:1521270 [2] NCCL INFO Connected all trees
+ilv-test:1521175:1521270 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+ilv-test:1521175:1521270 [2] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
+ilv-test:1521175:1521270 [2] NCCL INFO comm 0x55fdeef1c630 rank 2 nranks 4 cudaDev 2 busId 23000 - Init COMPLETE
+ilv-test:1521175:1521268 [0] NCCL INFO comm 0x55fdeef02380 rank 0 nranks 4 cudaDev 0 busId 5000 - Init COMPLETE
+ilv-test:1521175:1521269 [1] NCCL INFO comm 0x55fdeef19000 rank 1 nranks 4 cudaDev 1 busId 8000 - Init COMPLETE
+ilv-test:1521175:1521271 [3] NCCL INFO comm 0x55fdeef2f4c0 rank 3 nranks 4 cudaDev 3 busId 26000 - Init COMPLETE
