@@ -267,7 +267,7 @@ if __name__ == "__main__":
     train(iteration,eval_itr)
 
     ## Save the model
-    #torch.save(model.module,"SeedGPT.pt")
+    torch.save(model.module,"SeedGPT.pt")
 
 
 
