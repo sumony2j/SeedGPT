@@ -1,6 +1,6 @@
 # 🌱 SeedGPT
 
-**SeedGPT** is a lightweight Large Language Model (LLM) built from scratch using **PyTorch**. It generates text one word at a time starting from a seed word, making it ideal for educational purposes and quick experimentation with LLM concepts.
+**SeedGPT** is a lightweight decoder-only Large Language Model (LLM) built from scratch using **PyTorch**. Inspired by architectures like GPT-2, It generates texts starting from a seed word, making it ideal for educational purposes and quick experimentation with LLM concepts.
 
 ---
 
