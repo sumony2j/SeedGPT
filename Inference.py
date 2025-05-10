@@ -15,7 +15,7 @@ parser.add_argument("--tokenizer_path",type=str,default="./tokenizer.json",help=
 parser.add_argument("--input",type=str,default="Hello",help="Input for the LLM")
 parser.add_argument("--max_token",type=int,default=1000,help="Enter the number of tokens need to be generated")
 parser.add_argument("--output_file",type=str,default="./llm_output.txt",help="Enter the path of the output file")
-parser.add_argument("--show",type=bool,default=True,help="Show the generated output on stdout")
+parser.add_argument("--show",action='store_true',help="Show the generated output on stdout (Default: True)")
 
 args = parser.parse_args()
 
