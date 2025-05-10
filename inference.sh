@@ -10,4 +10,4 @@ python3 Inference.py                                           \
     --input "Where is"                                           \
     --max_token 10000                                          \
     --output_file "/root/llm/llm_output.txt"              \
-    --show false
+    --show
