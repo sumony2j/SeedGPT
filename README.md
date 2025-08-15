@@ -4,11 +4,44 @@
 
 ---
 
+This project is ideal for:  
+✅ **Students** exploring LLM internals  
+✅ **Researchers** prototyping small models  
+✅ **Developers** experimenting with custom GPT-like architectures  
+
+> 💡 *Inspired by GPT-2 and educational tutorials (like Karpathy's Let's Build GPT), SeedGPT demonstrates how to implement attention-based language models with minimal complexity—without sacrificing essential concepts.*  
+
+---
+
+## ✨ Key Highlights  
+- **Minimal Design, Maximum Clarity:** Built for learning core principles  
+- **Custom Training & Inference:** No dependency on Hugging Face Trainer for simplicity  
+- **Interactive Gradio UI:** Run inference or trigger training without command line  
+- **Highly Modular:** Easy to extend with new features (e.g., embeddings, layers)  
+
+---
+
+## 📜 Table of Contents  
+- [🚀 Features](#-features)  
+- [📦 Installation](#-installation)  
+- [🚀 Usage](#-usage)  
+  - [🏋️ Training](#-training)  
+  - [🧠 Inference](#-inference)  
+  - [🎨 Gradio UI](#-gradio-ui-new)  
+- [🌟 Inspiration](#-inspiration)  
+- [🔮 Future Improvements](#-future-improvements)  
+- [📜 License](#-license)  
+- [🤝 Contributions](#-contributions)  
+
+---
+
+
 ## 🚀 Features
 
 - 🧠 Minimal transformer-based LLM architecture in PyTorch  
 - ✍️ Word-by-word text generation from a given seed  
 - 🛠️ Simple and clean training & inference scripts  
+- 🖼️ Gradio-based UI for easy interaction 
 - 📦 Modular codebase for learning and experimentation  
 - 📜 Shell script support for quick execution (`train.sh` & `inference.sh`)
 
@@ -26,7 +59,7 @@ cd SeedGPT
 2. Install dependencies:
 
 ```bash
-pip install torch numpy pandas
+pip install torch numpy pandas gradio
 ```
 
 ---
@@ -88,6 +121,30 @@ bash inference.sh
 | --max_token      | Maximum number of tokens to generate.                                       |
 | --output_file    | File path where the generated output will be saved.                         |
 | --show           | Prints the generated text to the console. Else, only saves to output_file.  |
+
+---
+
+### 🎨 Gradio UI (New!)
+
+SeedGPT now comes with an interactive Gradio-based web UI for running inference without touching the command line.
+
+**Run the UI:**
+
+```bash
+python -m ui.py
+```
+
+**This will launch a local web interface where you can:**
+
+- Train a model from scratch
+
+- Enter a seed text for inference
+
+- Adjust generation settings (max tokens, etc.)
+
+- View generated text in real-time
+
+- Perfect for quick demos and non-technical users!
 
 ---
 

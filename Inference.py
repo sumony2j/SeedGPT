@@ -21,7 +21,7 @@ args = parser.parse_args()
 
 ## Load the tokenizer & process
 
-with open(args.tokenizer_path,"r")  as f:
+with open(args.tokenizer_path,"r", encoding="utf-8")  as f:
     tok = json.load(f)
 
 ctoi = {k:int(v) for k,v in tok["ctoi"].items()}
@@ -34,7 +34,7 @@ def decoder(l):
 
 ## Load the model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = torch.load(args.model_path,map_location=device)
+model = torch.load(args.model_path,map_location=device,weights_only=False)
 model.to(device)
 model.eval()
 
@@ -55,7 +55,8 @@ decoded_text = decoder(output[0].tolist())
 if(args.show):
     print(decoded_text)
 
+
 print(f"\nThe output is saved in file {args.output_file}\n")
-with open(args.output_file,"w") as f:
+with open(args.output_file,"w",encoding="utf-8") as f:
     f.write(decoded_text)
 
