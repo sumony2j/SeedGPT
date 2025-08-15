@@ -62,6 +62,12 @@ cd SeedGPT
 pip install torch numpy pandas gradio
 ```
 
+or
+
+```bash
+pip install -r requirements.txt
+```
+
 ---
 
 ## 🚀 Usage
